@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain For Sale</title>
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 420px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+            padding: 32px;
+            text-align: center;
+        }
+        h1 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #1e293b;
+            font-size: 1.05em;
+            margin-bottom: 18px;
+        }
+        p {
+            color: #2563eb; /* Blue text for the paragraph */
+            margin-bottom: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #cfcfcf;
+            border-radius: 4px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 70px;
+            max-height: 200px;
+        }
+        button {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 0;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        .success, .error {
+            margin-top: 18px;
+            font-size: 1rem;
+        }
+        .success { color: #16a34a; }
+        .error { color: #dc2626; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Brandname.com is for sale</h1>
+        <div class="subtitle">
+            This category-defining 1990s dot com domain has strong unicorn potential. Super charge you web ambitions with this rare super premium domain!
+        </div>
+        <p>You can make an offer below</p>
+        <form action="https://formspree.io/f/xqaqjywz" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="number" name="offer" placeholder="Offer Amount (USD)" min="1" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <input type="hidden" name="_subject" value="New Domain Offer Submission">
+            <!-- Optional: redirect to a thank you page -->
+            <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thankyou.html"> -->
+            <button type="submit">Send Offer</button>
+        </form>
+    </div>
+</body>
+</html>
