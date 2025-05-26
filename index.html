@@ -3,96 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domain For Sale</title>
+    <title>brandname.com – Premium Domain For Sale</title>
+    <meta name="description" content="brandname.com is a premium, brandable domain name now available for purchase. Secure this valuable web address today.">
     <style>
         body {
-            background: #f8f9fa;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f7f7;
             margin: 0;
             padding: 0;
+            color: #222;
         }
-        .container {
-            max-width: 420px;
-            margin: 60px auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-            padding: 32px;
+        header {
+            background: #19456b;
+            color: #fff;
+            padding: 2rem 0 1.5rem 0;
             text-align: center;
         }
-        h1 {
-            color: #2d3748;
-            margin-bottom: 10px;
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            letter-spacing: 2px;
         }
-        .subtitle {
-            color: #1e293b;
-            font-size: 1.05em;
-            margin-bottom: 18px;
+        header p {
+            margin: 0.7rem 0 0 0;
+            font-size: 1.25rem;
+            color: #dbe2ef;
         }
-        p {
-            color: #2563eb; /* Blue text for the paragraph */
-            margin-bottom: 24px;
+        main {
+            max-width: 700px;
+            margin: 2.5rem auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(25,69,107,0.10);
+            padding: 2.5rem 2rem 2rem 2rem;
         }
-        form {
+        .for-sale {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #3f72af;
+            font-weight: 700;
+        }
+        .features {
+            margin: 2rem 0;
+        }
+        .features h2 {
+            color: #19456b;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            margin: 0.6rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .features li::before {
+            content: "✔";
+            color: #3f72af;
+            font-size: 1.1em;
+            position: absolute;
+            left: 0;
+        }
+        .inquiry-form-section {
+            margin: 2.5rem 0 0 0;
+            padding: 1.7rem 1.1rem 1.1rem 1.1rem;
+            background: #e3edf7;
+            border-radius: 9px;
+        }
+        .inquiry-form-section h3 {
+            margin-top: 0;
+            color: #19456b;
+            font-size: 1.15rem;
+            text-align: center;
+            margin-bottom: 1.1rem;
+        }
+        .info-article {
+            text-align: center;
+            margin-bottom: 1.7rem;
+            font-size: 1.16rem;
+            color: #19456b;
+            font-style: italic;
+        }
+        .info-article a {
+            color: #3f72af;
+            text-decoration: underline;
+        }
+        form.inquiry-form {
+            max-width: 430px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 1rem;
         }
-        input, textarea {
-            padding: 10px;
-            border: 1px solid #cfcfcf;
-            border-radius: 4px;
+        .inquiry-form label {
             font-size: 1rem;
-            width: 100%;
+            color: #19456b;
+            margin-bottom: 0.2rem;
+            font-weight: 500;
         }
-        textarea {
+        .inquiry-form input,
+        .inquiry-form textarea {
+            padding: 0.7rem;
+            border: 1px solid #b3c6e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: #f8fafc;
             resize: vertical;
-            min-height: 70px;
-            max-height: 200px;
         }
-        button {
-            background: #2563eb;
+        .inquiry-form textarea {
+            min-height: 90px;
+            max-height: 220px;
+        }
+        .inquiry-form input[type="submit"] {
+            background: #3f72af;
             color: #fff;
             border: none;
-            border-radius: 4px;
-            padding: 12px 0;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            padding: 0.8rem 0;
             cursor: pointer;
-            transition: background 0.15s;
+            transition: background 0.2s;
+            margin-top: 0.3rem;
         }
-        button:hover {
-            background: #1d4ed8;
+        .inquiry-form input[type="submit"]:hover {
+            background: #19456b;
         }
-        .success, .error {
-            margin-top: 18px;
-            font-size: 1rem;
+        .thanks-message {
+            display: none;
+            text-align: center;
+            color: #19456b;
+            font-weight: bold;
+            margin-top: 1.1rem;
         }
-        .success { color: #16a34a; }
-        .error { color: #dc2626; }
+        footer {
+            text-align: center;
+            color: #8ca7c4;
+            font-size: 0.9rem;
+            padding: 1.6rem 0 0.7rem 0;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1.2rem 0.5rem 1rem 0.5rem;
+            }
+            .for-sale {
+                font-size: 1.4rem;
+            }
+            .inquiry-form-section {
+                padding: 1.1rem 0.3rem 0.5rem 0.3rem;
+            }
+            .info-article {
+                font-size: 1.02rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Brandname.com is for sale</h1>
-        <div class="subtitle">
-            This category-defining 1990s dot com domain has strong unicorn potential. Super charge you web ambitions with this rare super premium domain!
+    <header>
+        <h1>brandname.com</h1>
+        <p>The Perfect Domain for Your Next Big Brand, Project, or Startup</p>
+    </header>
+    <main>
+        <div class="for-sale">This premium domain is <strong>for sale</strong>!</div>
+        <section class="features">
+            <h2>Why Own brandname.com?</h2>
+            <ul>
+                <li>Ultra-short, memorable, and universally brandable</li>
+                <li>Ideal for launching a new business, app, blog, or digital service</li>
+                <li>Instant credibility and authority for any industry or niche</li>
+                <li>Perfect for agencies, SaaS, media, eCommerce, or creative ventures</li>
+                <li>Easy to market and adaptable for future brand expansion</li>
+            </ul>
+        </section>
+        <div class="info-article">
+            Here's an informative <a href="https://corelli.com/domains.html" target="_blank" rel="noopener">article</a> on choosing a domain.
         </div>
-        <p>You can make an offer below</p>
-       <form action="https://formspree.io/f/mvgayvaa" method="POST">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" required>
+        <section class="inquiry-form-section" id="inquiry-form">
+            <h3>Contact Us About brandname.com</h3>
+            <form class="inquiry-form" action="https://formspree.io/f/mvgayvaa" method="POST" autocomplete="on">
+                <input type="hidden" name="_redirect" value="https://brandname.com/thank-you.html">
+                <label for="name">Name *</label>
+                <input type="text" name="name" id="name" required autocomplete="name">
 
-    <label for="offer">Your Offer:</label>
-    <input type="text" id="offer" name="offer">
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" required autocomplete="email">
 
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" name="email" required>
+                <label for="offer">Offer (USD)</label>
+                <input type="number" name="offer" id="offer" min="0" step="any" placeholder="Optional">
 
-    <label for="message">Your Message:</label>
-    <textarea id="message" name="message" required></textarea>
+                <label for="message">Message *</label>
+                <textarea name="message" id="message" required placeholder="Your inquiry..."></textarea>
 
-    <button type="submit">Send</button>
-        </form>
-    </div>
+                <input type="submit" value="Send Inquiry">
+            </form>
+            <div class="thanks-message" id="thanks-message">
+                Thank you for your inquiry! We will contact you soon.
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 brandname.com &ndash; This domain is for sale.
+    </footer>
+    <script>
+        // Optional: show a thank you message after submission using AJAX (Formspree supports this)
+        document.querySelector('.inquiry-form').addEventListener('submit', function(e) {
+            // Uncomment below to enable AJAX-style feedback (Formspree recommends this)
+            /*
+            e.preventDefault();
+            var form = this;
+            var data = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(function(response) {
+                if (response.ok) {
+                    window.location.href = "https://brandname.com/thank-you.html";
+                } else {
+                    response.json().then(function(data){
+                        alert(data.error || 'Oops! There was a problem submitting your form');
+                    });
+                }
+            }).catch(function(error) {
+                alert('Oops! There was a problem submitting your form');
+            });
+            */
+        });
+    </script>
 </body>
 </html>
