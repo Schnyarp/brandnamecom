@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brandname.com — Premium Domain For Sale</title>
+  <meta name="description" content="Brandname.com — premium domain ideal for naming agencies, brand platforms, naming tools, brand marketplaces and creative consultancies. Submit an offer to purchase." />
+  <meta property="og:title" content="Brandname.com — Premium Domain For Sale" />
+  <meta property="og:description" content="Brandname.com — a memorable .com for naming agencies, identity platforms, and brand products. Contact domain@brandname.com" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#F5F8FB" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --max-width:1120px;
+      --bg-top:#fbfdff;
+      --bg-bottom:#f4f7fb;
+      --panel:#ffffff;
+      --muted:#586172;
+      --ink:#071827;
+      --accent-1:#4766ff; /* bright blue */
+      --accent-2:#ff6b6b; /* coral */
+      --accent-3:#ffd36b; /* warm gold */
+      --tile:#eef4ff;
+      --radius:16px;
+      --shadow: 0 28px 80px rgba(10,18,34,0.06);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:36px 20px;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 260px at 12% 8%, rgba(71,102,255,0.03), transparent 12%),
+        radial-gradient(700px 240px at 86% 20%, rgba(255,107,107,0.02), transparent 14%),
+        linear-gradient(180deg,var(--bg-top) 0%, var(--bg-bottom) 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      overflow-x:hidden;
+    }
+
+    /* Look chosen: "Brand Workshop"
+       - studio backdrop with subtle logo-tile grid, geometric color accents
+       - modern, creative and studio-like — suits naming/brand products
+       - decorative layers are pointer-events:none so they don't interfere with UI
+    */
+    .bg { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:visible; }
+
+    .studio-band {
+      position:fixed;
+      left:50%;
+      top:8%;
+      width:1100px;
+      height:360px;
+      transform:translateX(-50%);
+      z-index:0;
+      pointer-events:none;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.6), rgba(250,250,254,0.4)),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 80'><g fill='%23000000' fill-opacity='0.02'><rect x='8' y='8' width='56' height='56' rx='8'/><rect x='76' y='8' width='56' height='56' rx='8'/><rect x='144' y='8' width='56' height='56' rx='8'/></g></svg>");
+      background-repeat:repeat;
+      background-size:220px 120px;
+      border-radius:20px;
+      mix-blend-mode:screen;
+      opacity:0.96;
+    }
+
+    .geom {
+      position:fixed;
+      right:6%;
+      top:6%;
+      width:300px;
+      height:300px;
+      z-index:0;
+      pointer-events:none;
+      opacity:0.06;
+      background-image:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><g fill='%23000000' fill-opacity='0.04'><circle cx='48' cy='48' r='32'/><rect x='120' y='30' width='80' height='80' rx='10'/><path d='M220 40 L260 80 L220 120' stroke='%23000000' stroke-opacity='0.03' stroke-width='6' fill='none'/></g></svg>");
+      background-repeat:no-repeat;
+      background-size:contain;
+      mix-blend-mode:screen;
+    }
+
+    .accent-strip {
+      position:fixed;
+      left:6%;
+      top:40%;
+      width:88%;
+      height:90px;
+      z-index:0;
+      pointer-events:none;
+      background: linear-gradient(90deg, rgba(71,102,255,0.02), rgba(255,107,107,0.02));
+      opacity:0.04;
+      mix-blend-mode:multiply;
+      border-radius:12px;
+    }
+
+    .floaters {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      overflow:visible;
+    }
+
+    .badge {
+      position:absolute;
+      width:68px;
+      height:68px;
+      background-size:contain;
+      background-repeat:no-repeat;
+      opacity:0.12;
+      will-change:transform,opacity;
+      filter: drop-shadow(0 12px 28px rgba(10,18,34,0.06));
+    }
+
+    @keyframes lift {
+      0% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-18px) rotate(6deg); }
+      100% { transform: translateY(0) rotate(-4deg); }
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      padding:36px;
+      border-radius:20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.995), rgba(255,255,255,0.985));
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(10,18,34,0.03);
+      position:relative;
+      z-index:2;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:14px;
+    }
+
+    .brand{ display:flex; gap:14px; align-items:center; }
+    .logo{
+      width:92px;
+      height:92px;
+      border-radius:18px;
+      background: linear-gradient(135deg,var(--accent-1), var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:900;
+      font-size:20px;
+      box-shadow: 0 12px 36px rgba(10,18,34,0.06);
+      flex-shrink:0;
+    }
+
+    h1{ margin:0; font-size:28px; color:var(--ink); }
+    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; max-width:760px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+      margin-top:12px;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(71,102,255,0.02), rgba(255,107,107,0.01));
+      padding:18px;
+      border-radius:12px;
+      color:var(--ink);
+      border:1px solid rgba(10,18,34,0.03);
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .hero h2{ margin:0 0 8px 0; font-size:22px; }
+    .hero p{ margin:0; color:var(--muted); }
+
+    .panel {
+      background: var(--panel);
+      color:var(--ink);
+      padding:22px;
+      border-radius:14px;
+      box-shadow: 0 10px 34px rgba(10,18,34,0.06);
+      border: 1px solid rgba(10,18,34,0.02);
+      max-width:820px;
+    }
+
+    h2.section { margin-top:0; font-size:20px; color:var(--ink); }
+    .features ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .features li{ margin-bottom:10px; }
+
+    .samples { display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; }
+    .sample {
+      width:160px;
+      height:92px;
+      border-radius:12px;
+      background: linear-gradient(180deg,#fff,#fbfbfb);
+      border:1px solid rgba(10,18,34,0.03);
+      box-shadow: 0 8px 22px rgba(10,18,34,0.04);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      color:var(--muted);
+      text-align:center;
+      padding:12px;
+    }
+
+    .cta-row{ display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:800;
+      cursor:pointer;
+      text-decoration:none;
+      border:0;
+    }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--accent-1), var(--accent-3));
+      color:#042827;
+      box-shadow: 0 10px 30px rgba(10,18,34,0.12);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(10,18,34,0.06);
+      color:var(--muted);
+    }
+
+    .price { margin-top:12px; font-weight:800; color:var(--ink); font-size:16px; }
+    .muted-small { color:var(--muted); font-size:13px; margin-top:6px; }
+
+    .contact-card{
+      position:sticky;
+      top:32px;
+      align-self:start;
+      background: linear-gradient(180deg,#ffffff,#fbfbfb);
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(10,18,34,0.03);
+      box-shadow: 0 8px 26px rgba(10,18,34,0.035);
+      max-width:360px;
+    }
+
+    .contact-card h3{ margin:0 0 8px 0; font-size:16px; color:var(--ink); }
+    .contact-email, .contact-email a{
+      white-space:nowrap;
+      display:inline-block;
+      font-weight:800;
+      color:var(--accent-1);
+      word-break: normal;
+      font-size:0.98rem;
+      text-decoration:none;
+    }
+
+    form label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    form input, form textarea {
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(10,18,34,0.06);
+      background:#fff;
+      color:var(--ink);
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    form textarea{ min-height:110px; resize:vertical; }
+
+    .resources {
+      margin-top:14px;
+      font-size:13px;
+      color:var(--muted);
+      border-top:1px dashed rgba(10,18,34,0.04);
+      padding-top:12px;
+    }
+
+    .resources a { color:var(--accent-2); font-weight:700; text-decoration:none; }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
+
+    @media (max-width:980px){
+      .grid{ grid-template-columns: 1fr; gap:18px; }
+      .contact-card{ position:relative; top:auto; width:100%; max-width:none; }
+      .container{ padding:24px; }
+      .logo{ width:72px; height:72px; border-radius:16px; }
+      h1{ font-size:22px; }
+      .studio-band, .geom, .accent-strip, .floaters { display:none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://brandname.com",
+        "name":"Brandname.com",
+        "description":"Brandname.com — premium domain for naming agencies, identity platforms, brand marketplaces and creative products."
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"domain@brandname.com"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="studio-band" aria-hidden="true"></div>
+    <div class="geom" aria-hidden="true"></div>
+    <div class="accent-strip" aria-hidden="true"></div>
+    <div class="floaters" id="floaters" aria-hidden="true"></div>
+  </div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">BN</div>
+        <div>
+          <h1 id="main-heading">Brandname.com</h1>
+          <p class="lead">Premium domain for naming agencies, brand platforms, identity tools and creative marketplaces.</p>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:var(--muted);font-size:13px">For inquiries</div>
+        <div class="contact-email"><a href="mailto:domain@brandname.com">domain@brandname.com</a></div>
+      </div>
+    </header>
+
+    <div class="hero" role="note" aria-live="polite" aria-labelledby="hero-title">
+      <div>
+        <h2 id="hero-title">A versatile, memorable .com for naming & brand products</h2>
+        <p>Brandname.com is direct, brandable and instantly understandable — ideal for naming consultancies, brand identity marketplaces, naming tools, and creative platforms that help teams name products and companies.</p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#" id="inquireBtn">Make an Offer</a>
+          <a class="btn btn-ghost" href="mailto:domain@brandname.com?subject=Domain%20Offer%20-%20Brandname.com">Email Now</a>
+        </div>
+      </div>
+
+      <div style="min-width:200px; text-align:center">
+        <div style="color:var(--muted); font-size:13px">Domain</div>
+        <div style="font-weight:900; font-size:20px; margin-top:6px">Brandname.com</div>
+        <div style="color:var(--muted); font-size:13px; margin-top:8px">Serious offers only.</div>
+      </div>
+    </div>
+
+    <section class="grid" aria-label="Main content">
+      <div>
+        <article class="panel" aria-labelledby="why-title">
+          <h2 id="why-title" class="section">Why Brandname.com?</h2>
+          <p class="lead">A short, descriptive .com that signals naming expertise and creative services. Great for agencies, tools, marketplaces and SaaS products that help teams create names, test identity, or sell brand assets.</p>
+
+          <div class="features" style="margin-top:12px">
+            <ul>
+              <li>Strong category signal — communicates naming capability instantly</li>
+              <li>Works for SaaS naming tools, marketplace platforms, consulting agencies, and creative studios</li>
+              <li>Brandable across product pages, portfolios, marketing and partner ecosystems</li>
+            </ul>
+          </div>
+
+          <div class="samples" aria-hidden="false">
+            <div class="sample">Naming Agency</div>
+            <div class="sample">Name Marketplace</div>
+            <div class="sample">Identity Toolkit</div>
+            <div class="sample">Brand Testing Platform</div>
+          </div>
+        </article>
+
+        <article class="panel" style="margin-top:18px" aria-labelledby="about-title">
+          <h3 id="about-title" style="margin-top:0">About this domain</h3>
+          <p class="lead">Brandname.com is a premium domain available for transfer.</p>
+
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Well-suited for founders, agencies and product teams focused on naming, identity and brand tooling</li>
+            <li>Useful for integrations with CMS, creative workflows, API-driven name checks and marketplace tooling</li>
+            <li>Transfer-ready — We use escrow to ensure a successful and secure transaction for both the buyer and the seller.</li>
+          </ul>
+
+          <div class="resources" aria-labelledby="resources-title">
+            <div id="resources-title" style="font-weight:800; margin-bottom:8px">Helpful resource</div>
+            <div><a href="https://corelli.com/domains.html" target="_blank" rel="noopener noreferrer">How To Choose A Domain Name</a></div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="contact-card" aria-label="Contact & offer">
+        <div>
+          <h3 style="margin-top:0">Contact & Offer</h3>
+          <p style="margin-top:6px;color:var(--muted)">Submit an offer — this form opens your email client with the details prefilled. Or email <a href="mailto:domain@brandname.com" class="contact-email">domain@brandname.com</a>.</p>
+
+          <form id="inquiryForm" onsubmit="handleSubmit(event)" aria-label="Domain offer form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="offer">Your offer (USD)</label>
+            <input id="offer" name="offer" type="text" placeholder="Enter your offer (USD)" required />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Your company or organization" />
+
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Your country" required />
+
+            <label for="phone">Phone number (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message (questions, timeline, escrow preference)</label>
+            <textarea id="message" name="message" placeholder="Hi — I'm submitting an offer for Brandname.com. Please share transfer instructions and next steps."></textarea>
+
+            <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px">Send Offer</button>
+          </form>
+
+          <footer style="margin-top:10px; text-align:left; color:var(--muted); font-size:13px">
+            Prefer a direct email? <a href="mailto:domain@brandname.com" style="color:var(--accent-1)" class="contact-email">domain@brandname.com</a>
+          </footer>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      &copy; 2025 Brandname.com. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // floating badges: mark, tag, spark, palette (data-URI SVGs)
+    (function placeFloaters(){
+      const layer = document.getElementById('floaters');
+      if(!layer) return;
+
+      const svgs = {
+        mark: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='28' fill='%23FFFFFF' stroke='%23000000' stroke-opacity='0.04'/><path d='M18 34l8 8 20-20' stroke='%23000000' stroke-opacity='0.06' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>`),
+        tag: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='6' y='18' width='52' height='28' rx='8' fill='%23FFFFFF' stroke='%23000000' stroke-opacity='0.04'/><circle cx='20' cy='32' r='4' fill='%234766ff'/></svg>`),
+        palette: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M20 12a18 18 0 1 0 30 20c0 6-6 8-12 8-6 0-16-2-18-10' fill='%23FFFFFF' stroke='%23000000' stroke-opacity='0.04'/></svg>`),
+        spark: encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='24' cy='24' r='8' fill='%23FFD36B'/></svg>`)
+      };
+
+      const items = [
+        {svg:svgs.mark, left:'12%', top:'18%', size:78, dur:9000},
+        {svg:svgs.tag, left:'78%', top:'16%', size:64, dur:11000},
+        {svg:svgs.palette, left:'48%', top:'66%', size:64, dur:10000},
+        {svg:svgs.spark, left:'84%', top:'54%', size:56, dur:12000}
+      ];
+
+      items.forEach(it=>{
+        const el = document.createElement('div');
+        el.className = 'badge';
+        el.style.left = it.left;
+        el.style.top = it.top;
+        el.style.width = it.size + 'px';
+        el.style.height = it.size + 'px';
+        el.style.backgroundImage = `url("data:image/svg+xml;utf8,${it.svg}")`;
+        el.style.animation = `lift ${it.dur}ms ease-in-out ${Math.random()*1200}ms infinite`;
+        el.style.opacity = 0.06 + Math.random()*0.16;
+        layer.appendChild(el);
+      });
+    })();
+
+    // Compose mailto body and open user's email client
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const offer = document.getElementById('offer').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Domain Offer - Brandname.com');
+      const bodyText =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company: ${company || '(not provided)'}\n` +
+        `Offer (USD): ${offer}\n` +
+        `Country: ${country}\n` +
+        `Phone: ${phone || '(not provided)'}\n\n` +
+        `Message:\n${message}\n\n---\nSent from Brandname.com offer form`;
+
+      window.location.href = `mailto:domain@brandname.com?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+    }
+
+    document.getElementById('inquiryForm').addEventListener('submit', handleSubmit);
+
+    // Inquire button behavior: scroll to form on mobile, open mailto on desktop
+    document.getElementById('inquireBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      if(window.innerWidth < 900){
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        form.querySelector('input')?.focus();
+      } else {
+        const subject = encodeURIComponent('Domain Offer - Brandname.com');
+        const body = encodeURIComponent('Hi — I would like to make an offer for Brandname.com. Please reply with transfer instructions and next steps.');
+        window.location.href = `mailto:domain@brandname.com?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
+</html>
