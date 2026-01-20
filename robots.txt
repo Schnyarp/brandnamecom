@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://brandname.com/sitemap.xml
