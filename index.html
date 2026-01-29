@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandname.com | Discover Your Brands</title>
+    <style>
+        /* Updated Mauve and Softer Yellow Theme */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            background-color: #F8F9FA; /* Light Gray Background */
+            color: #212529; /* Dark Gray Text */
+        }
+        .top-message {
+            text-align: center;
+            padding: 10px;
+            background-color: #FFCC00; /* Yellow Background */
+            color: #000000; /* Black Text */
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo svg {
+            height: 80px; /* Larger Logo */
+            width: 80px;
+        }
+        .logo-text {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #00BFFF; /* Shimmery Blue for the main text */
+            display: inline;
+        }
+        .logo-small {
+            font-size: 0.8em;
+            font-weight: 125; /* Ultra-light but present */
+            letter-spacing: 0.15em; /* Subtle geometric style */
+            color: #6c757d; /* Muted Gray for contrast */
+            display: inline; /* Positioned next to "brandname" */
+        }
+        .container {
+            text-align: center;
+            max-width: 750px;
+            width: 100%;
+            margin: auto;
+            padding: 40px 20px;
+            color: #212529; /* Dark Gray Text */
+        }
+        .search-bar {
+            max-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #00BFFF; /* Shimmery Blue Border */
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 12px;
+            font-size: 1em;
+            border: none;
+            outline: none;
+        }
+        .search-bar button {
+            background-color: #FFF176; /* Lightened Yellow Accent */
+            color: #000000; /* Black Text */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+        .search-bar button:hover {
+            background-color: #FFEB3B; /* Softer Yellow Hover */
+        }
+        footer {
+            background-color: #00BFFF; /* Shimmery Blue Footer */
+            color: #ffffff; /* White Text */
+            padding: 15px 0;
+            text-align: center;
+        }
+        footer span {
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        .privacy-info {
+            margin-top: 15px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #212529; /* Dark Gray */
+        }
+    </style>
+    <script>
+        // JavaScript for dynamically detecting and displaying the visitor's country
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch the visitor's geolocation data
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    // Dynamic country detection
+                    document.getElementById('country').textContent = data.country_name || 'Your Country';
+                })
+                .catch(() => {
+                    document.getElementById('country').textContent = 'Your Country';
+                });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Top Message -->
+    <div class="top-message">
+        This is a mock page in development. Please watch us grow!
+    </div>
+
+    <!-- Header with a Distorted Maze-like Logo -->
+    <div class="header">
+        <div class="logo">
+            <!-- Mauve Circle with Underwater Distorted Maze -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <!-- Mauve Circle -->
+                <circle cx="50" cy="50" r="45" fill="#E0B0FF" />
+                
+                <!-- Maze Design (Underwater Distortion) -->
+                <path d="M29,31 Q50,28 70,30 T71,70 T29,69 Z" stroke="white" stroke-width="3" fill="none" />
+                <path d="M36,36 Q50,40 65,37 T66,63 T36,61 Z" stroke="white" stroke-width="2.4" fill="none" />
+                <path d="M41,42 Q50,45 59,43 T60,58 T42,57 Z" stroke="white" stroke-width="2.2" fill="none" />
+            </svg>
+            
+            <!-- Branding Name -->
+            <span class="logo-text">brandname<span class="logo-small">.com</span></span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for brands or needs...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <span>Join</span>
+        <span>Brands</span>
+        <span>About</span>
+        <span>Terms</span>
+    </footer>
+
+    <!-- Privacy -->
+    <div class="privacy-info">
+        <p>We will not violate your privacy.</p>
+        <p>© 2026 Brandname.com. All rights reserved. | <span id="country">Your Country</span></p>
+    </div>
+</body>
+</html>
