@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandname.com | Discover Your Brands</title>
+    <style>
+        /* Minimalistic and Ultra-Light Logo Theme */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            background-color: #F8F9FA; /* Light Gray Background */
+            color: #212529; /* Dark Gray Text */
+        }
+        .top-message {
+            text-align: center;
+            padding: 10px;
+            background-color: #FFCC00; /* Yellow Background */
+            color: #000000; /* Black Text */
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 40px; /* Added spacing below the yellow banner */
+        }
+        .header {
+            text-align: center;
+            padding: 80px 0; /* Larger vertical padding for proper positioning */
+            position: relative;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo svg {
+            height: 80px;
+            width: 80px;
+        }
+        .logo-text {
+            font-size: 2.5em;
+            font-weight: 200; /* Reduced to ultra-light for clean, modern look */
+            letter-spacing: -0.02em; /* Tight kerning for sleekness */
+            color: #000000;
+            display: inline;
+        }
+        .logo-small {
+            font-size: 0.8em;
+            font-weight: 100; /* Extra-light ".com" for balance */
+            letter-spacing: 0.15em; /* Proportional spacing for modern feel */
+            color: #6c757d; /* Muted gray to complement */
+            display: inline;
+        }
+        .container {
+            text-align: center;
+            max-width: 750px;
+            width: 100%;
+            margin: auto;
+            padding: 40px 20px;
+            color: #212529;
+        }
+        .search-bar {
+            max-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #00BFFF;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 12px;
+            font-size: 1em;
+            border: none;
+            outline: none;
+        }
+        .search-bar button {
+            background-color: #FFF176;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+        .search-bar button:hover {
+            background-color: #FFEB3B;
+        }
+        footer {
+            background-color: #00BFFF;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer span {
+            font-size: 1em;
+            font-weight: 400;
+            color: #ffffff;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        footer span:hover {
+            color: #FFF176;
+        }
+        .privacy-info {
+            margin-top: 15px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #212529;
+        }
+        .privacy-info span {
+            font-weight: 400;
+            cursor: pointer;
+            color: #212529;
+        }
+    </style>
+    <script>
+        // JavaScript for dynamically detecting and displaying the visitor's country
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch the visitor's geolocation data
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    // Dynamic country detection
+                    document.getElementById('country').textContent = data.country_name || 'Your Country';
+                })
+                .catch(() => {
+                    document.getElementById('country').textContent = 'Your Country';
+                });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Top Message -->
+    <div class="top-message">
+        This is a mock page in development. Please watch us grow!
+    </div>
+
+    <!-- Header with Ultra-Light Logo -->
+    <div class="header">
+        <div class="logo">
+            <!-- Mauve Circle -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <!-- Inner Mauve Circle -->
+                <circle cx="50" cy="50" r="45" fill="#E0B0FF" />
+                
+                <!-- Maze Design (Slightly Raised) -->
+                <g transform="translate(0, -2)">
+                    <path d="M29,31 Q50,28 70,30 T71,70 T29,69 Z" stroke="white" stroke-width="3" fill="none" />
+                    <path d="M36,36 Q50,40 65,37 T66,63 T36,61 Z" stroke="white" stroke-width="2.4" fill="none" />
+                    <path d="M41,42 Q50,45 59,43 T60,58 T42,57 Z" stroke="white" stroke-width="2.2" fill="none" />
+                </g>
+            </svg>
+            
+            <!-- Branding Name -->
+            <span class="logo-text">brandname<span class="logo-small">.com</span></span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for brands or needs...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <span>Join</span>
+        <span>Brands</span>
+        <span>About</span>
+    </footer>
+
+    <!-- Privacy and Copyright -->
+    <div class="privacy-info">
+        <p>© 2026 Brandname.com. All rights reserved. | <span>Terms</span> | <span>Privacy</span></p>
+        <p id="country">Your Country</p>
+    </div>
+</body>
+</html>
