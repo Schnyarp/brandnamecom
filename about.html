@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Brandname.com | Learn More About What We Are Building</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9FA; /* Light Gray Background */
+            color: #212529; /* Dark Gray Text */
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo svg {
+            height: 80px;
+            width: 80px;
+        }
+        .logo-text {
+            font-size: 2.5em;
+            font-weight: 200; /* Ultra-light text for sleek look */
+            letter-spacing: -0.02em;
+            color: #000000;
+            display: inline;
+        }
+        .logo-small {
+            font-size: 0.8em;
+            font-weight: 100;
+            letter-spacing: 0.15em;
+            color: #6c757d;
+            display: inline;
+        }
+        .highlight {
+            font-size: 0.6em;
+            font-weight: 300;
+            color: #6c757d;
+        }
+        .hero {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5em; /* Match the style of 'brandname.com' logo */
+            font-weight: 200; /* Ultra-light text for a sleek, modern look */
+            letter-spacing: -0.02em; /* Same letter spacing as logo */
+            color: #000000; /* Black to match the logo text */
+            margin-bottom: 20px;
+        }
+        .hero ul {
+            list-style: none; /* Remove default bullets */
+            max-width: 700px; /* Keep it contained and centered */
+            margin: 0 auto;
+            padding: 0;
+            text-align: left; /* Align to left for custom bullets */
+        }
+        .hero ul li {
+            font-size: 1em; /* Sleek, smaller font size */
+            color: #6c757d;
+            margin-bottom: 20px; /* Add space between list items */
+            line-height: 1.6; /* Sleek updated spacing */
+            display: flex;
+            align-items: flex-start; /* Align text vertically with icons */
+            gap: 12px;
+        }
+        .hero ul li a {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            text-decoration: none;
+            color: #6c757d;
+            transition: opacity 0.3s ease;
+        }
+        .hero ul li a:hover {
+            opacity: 0.8;
+        }
+        .custom-bullet {
+            width: 30px; /* Larger size for better visibility */
+            height: 30px;
+            flex-shrink: 0; /* Keep fixed size while text expands */
+            cursor: pointer;
+        }
+        .search-bullet .custom-bullet {
+            fill: #FFF176; /* Yellow for Search */
+        }
+        .profile-bullet .custom-bullet {
+            fill: #00BFFF; /* Blue for Profile */
+        }
+        .user-bullet .custom-bullet {
+            fill: #FF8A80; /* Light Red for User */
+        }
+        .store-bullet .custom-bullet {
+            fill: #81C784; /* Green for Store */
+        }
+        .shimmery-lines {
+            stroke: white;
+            stroke-width: 1.5;
+            fill: none;
+        }
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 40px;
+        }
+        .benefit-card {
+            width: 300px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+        }
+        .benefit-card p {
+            font-size: 1em; /* Match the smaller description style */
+            color: #6c757d;
+            line-height: 1.6;
+        }
+        .circle-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .circle-icon a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.3s ease;
+        }
+        .circle-icon a:hover {
+            opacity: 0.8;
+        }
+        .circle-icon svg {
+            height: 70px;
+            width: 70px;
+            cursor: pointer;
+        }
+        .search-logo svg .inner-circle {
+            fill: #FFF176; /* Yellow */
+        }
+        .brands-logo svg .inner-circle {
+            fill: #00BFFF; /* Blue */
+        }
+        .user-logo svg .inner-circle {
+            fill: #FF8A80; /* Light Red */
+        }
+        .store-logo svg .inner-circle {
+            fill: #81C784; /* Green */
+        }
+        .mock-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #5E35B1;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+        }
+        .mock-link:hover {
+            color: #7E57C2;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #00BFFF; /* Bright Blue Footer */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            font-size: 1em;
+            font-weight: 400;
+            color: #ffffff;
+            margin: 0 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #FFF176; /* Yellow Hover */
+        }
+        .privacy-info {
+            color: #212529;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .privacy-info span {
+            cursor: pointer;
+            color: #212529;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#E0B0FF" />
+                    <g transform="translate(0, -2)">
+                        <path d="M29,31 Q50,28 70,30 T71,70 T29,69 Z" stroke="white" stroke-width="3" fill="none" />
+                        <path d="M36,36 Q50,40 65,37 T66,63 T36,61 Z" stroke="white" stroke-width="2.4" fill="none" />
+                        <path d="M41,42 Q50,45 59,43 T60,58 T42,57 Z" stroke="white" stroke-width="2.2" fill="none" />
+                    </g>
+                </svg>
+                <span class="logo-text">brandname<span class="logo-small">.com</span><span class="highlight">/about.html</span></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Where You're The Boss!</h1>
+        <ul>
+            <li class="search-bullet">
+                <a href="index.html">
+                    <svg class="custom-bullet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="50" />
+                        <path class="shimmery-lines" d="M30,30 Q50,35 70,30 T70,70 T30,70 Z"></path>
+                        <path class="shimmery-lines" d="M36,36 Q50,40 65,36 T65,65 T36,66 Z"></path>
+                        <path class="shimmery-lines" d="M41,41 Q50,45 59,41 T59,60 T41,59 Z"></path>
+                    </svg>
+                    <span>Where all users can find the brand they are looking for or discover new ones.</span>
+                </a>
+            </li>
+            <li class="profile-bullet">
+                <a href="brands.html">
+                    <svg class="custom-bullet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="50" />
+                        <path class="shimmery-lines" d="M30,30 Q50,35 70,30 T70,70 T30,70 Z"></path>
+                        <path class="shimmery-lines" d="M36,36 Q50,40 65,36 T65,65 T36,66 Z"></path>
+                        <path class="shimmery-lines" d="M41,41 Q50,45 59,41 T59,60 T41,59 Z"></path>
+                    </svg>
+                    <span>Where you can learn about specific brands in detail from their social media–like pages.</span>
+                </a>
+            </li>
+            <li class="user-bullet">
+                <a href="user.html">
+                    <svg class="custom-bullet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="50" />
+                        <path class="shimmery-lines" d="M30,30 Q50,35 70,30 T70,70 T30,70 Z"></path>
+                        <path class="shimmery-lines" d="M36,36 Q50,40 65,36 T65,65 T36,66 Z"></path>
+                        <path class="shimmery-lines" d="M41,41 Q50,45 59,41 T59,60 T41,59 Z"></path>
+                    </svg>
+                    <span>Where you can create your own private account to track your brand research, preferences, purchases, and ratings.</span>
+                </a>
+            </li>
+            <li class="store-bullet">
+                <a href="store.html">
+                    <svg class="custom-bullet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="50" />
+                        <path class="shimmery-lines" d="M30,30 Q50,35 70,30 T70,70 T30,70 Z"></path>
+                        <path class="shimmery-lines" d="M36,36 Q50,40 65,36 T65,65 T36,66 Z"></path>
+                        <path class="shimmery-lines" d="M41,41 Q50,45 59,41 T59,60 T41,59 Z"></path>
+                    </svg>
+                    <span>Where you can sign up for a membership fee to acquire brand name goods and services at wholesale prices in the brandname.com store!</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="benefits">
+        <!-- Fully Updated Icons and Descriptions -->
+        <div class="benefit-card">
+            <div class="circle-icon search-logo">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" class="inner-circle" />
+                        <g>
+                            <path d="M29,31 Q50,28 70,30 T71,70 T29,69 Z" stroke="white" stroke-width="3" fill="none" />
+                            <path d="M36,36 Q50,40 65,37 T66,63 T36,61 Z" stroke="white" stroke-width="2.4" fill="none" />
+                            <path d="M41,42 Q50,45 59,43 T60,58 T42,57 Z" stroke="white" stroke-width="2.2" fill="none" />
+                        </g>
+                    </svg>
+                </a>
+                <span>Search</span>
+            </div>
+            <p>
+                The front of our site is our simple looking search window. But it is anything but simple. It will allow you to search for a specific brand, and related brands and categories, or look for goods and services that can help you meet a need. It will also offer much more and ensure that you become a fully informed buyer before you select your favorite brand or learn of new ones.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="circle-icon brands-logo">
+                <a href="brands.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" class="inner-circle" />
+                        <g>
+                            <path d="M29,31 Q50,28 70,30 T71,70 T29,69 Z" stroke="white" stroke-width="3" fill="none" />
+                            <path d="M36,36 Q50,40 65,37 T66,63 T36,61 Z" stroke="white" stroke-width="2.4" fill="none" />
+                            <path d="M41,42 Q50,45 59,43 T60,58 T42,57 Z" stroke="white" stroke-width="2.2" fill="none" />
+                        </g>
+                    </svg>
+                </a>
+                <span>Brands</span>
+            </div>
+            <p>
+                In typical social media, you are the product. In this section of brandname.com, the product is the product. Brands will create their own social media like profile pages, including product descriptions, their history, pictures and videos, and a section for user comments and ratings. Users will also be able to reach the customer service departments of the goods and services they use and link with brands that offer direct distribution to consumers.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="circle-icon user-logo">
+                <a href="user.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" class="inner-circle" />
+                        <g>
+                            <path d="M29,31 Q50,28 70,30 T71,70 T29,69 Z" stroke="white" stroke-width="3" fill="none" />
+                            <path d="M36,36 Q50,40 65,37 T66,63 T36,61 Z" stroke="white" stroke-width="2.4" fill="none" />
+                            <path d="M41,42 Q50,45 59,43 T60,58 T42,57 Z" stroke="white" stroke-width="2.2" fill="none" />
+                        </g>
+                    </svg>
+                </a>
+                <span>User</span>
+            </div>
+            <p>
+                This will be your private nook within brandname.com. Here you will be able to manage your preferences, follow your brand research, track your brand reviews and ratings and manage your account. This section will be private, for your eyes only.
+            </p>
+            <a href="user.html" class="mock-link">See a user mock up</a>
+        </div>
+
+        <div class="benefit-card">
+            <div class="circle-icon store-logo">
+                <a href="store.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" class="inner-circle" />
+                        <g>
+                            <path d="M29,31 Q50,28 70,30 T71,70 T29,69 Z" stroke="white" stroke-width="3" fill="none" />
+                            <path d="M36,36 Q50,40 65,37 T66,63 T36,61 Z" stroke="white" stroke-width="2.4" fill="none" />
+                            <path d="M41,42 Q50,45 59,43 T60,58 T42,57 Z" stroke="white" stroke-width="2.2" fill="none" />
+                        </g>
+                    </svg>
+                </a>
+                <span>Store</span>
+            </div>
+            <p>
+                Our Store will be available to users who acquire an annual membership at a definitely worth it fee. It will offer users, retailers and businesses their favorite brands at stunningly low prices. It will also allow users to accrue points redeemable for amazing brand sample packs.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="join.html">Join</a>
+        <a href="brands.html">Brands</a>
+        <a href="about.html">About</a>
+    </footer>
+    <div class="privacy-info">
+        <p>© 2026 Brandname.com. All rights reserved. | <span>Terms</span> | <span>Privacy</span></p>
+    </div>
+</body>
+</html>
